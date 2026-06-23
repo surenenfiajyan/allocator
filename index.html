@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Allocator</title>
+
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAC4jAAAuIwF4pT92AAAJMElEQVRYw7VXe1BU1xn/3bt37+6yyyryWBUFFlRoBFFQIkGlaUdUbMa2kbZjzWj/aFNNjOlMn6mdtukfWp1MZmI0mU61jE6jbZKxjdUmdtKa+CwqKiLykJcIKyCwL/a99/bc71yWBWf6X3a57P3O/Z3v+873+N1zhO9urjm9vCT/K9FYXFYUxaACAr7AD1OuiqIYlyRD+HpT57+l8pL8mld31slqNA5BliaRqsovSfeH3SKmyxMuxlX+a/g/GE0WmGDQZQWCGolLgtEgvfH2X9ZJsVhc1Ix7feO4eO0u+w0yuyry5mUh1WZBU7OLKRZgMosoX5bD5Ifw+2Jkragoi7BtbcO0NluqhJLF2Wi82YdwWGFDKpYUz2E6Q+juGWMIATPTZKxeWcR0W6HZlrSwC0aJGW/BkQ9vwOGYTcpOftyAoRt5sPa/xGQRUQwhUrgfxvadMKn5zLyKwOyjWkCRMridlIfFLkQXvAO5/WcwIkMLEQLz34Lgd8Iy9nXC+Ay38Ov6VtTWVkBRVINEOWcRcnvGkcmM5+TMB8sRXMM9GOq3oxJLWdSAMAL4rC2OZ1ABG+Yyl4CbjzLZVBH5KCWMX8nAlfZDqGYoGWbCXOlLRTqc7FtKGVLjBoyOdE2kSEhOOv1pxrWLiyrh+CUwSdHv+Jg6WVgT+hhiOkZN6JliS/9wBxQVzhwH/vrJNTwe7aMhqxzDitXjaL/4RwqzaPFi0zoHOs4fx6A7g/L7pYoBqFEj2hvfI3OyZQib1jpw73Q9U2mniqtYFYF/+B7a206QXqO9FwUF6Vp2khxgHqVaLRi8noeRgVTyuGx1AI55Cm4Jt5ktEWZjCHlOO1qu3ocH/YQpyWD/S/+Lu8++RYU+M5aK3NSNuOHchbAxSk2UJa9lTl5Bx3P7yFJmOJ0V4N5EELgDrG1uNQ3AMrCbZbiYwtV64QgacRNP4yBhQ95xHHxzI1bizyhANkQ2eOXMAQhffhcVPwYF3vvQh0MvnMTqs4DZwlNw9qV/IW05UPE9btN1ewS3G+6juHhRcgRAla59lURODeySaJKiR0mThYSsYwxcTswz8hQrpJFXmahjNF0iDU6vASZbLFqrDbJqzyFFBrMHKXKIrdxLqkLs2ax0FeGRIdZiM2iS2ewHAiaExsJkPfxIRJqYitCAB9SFzKo1YoPBE0XYHSYHIgxjMZoThShNsFX50lxEl7+Gy/1eelRbvQi52bPw7olKws6wyfjpD7+KQ8deRNPQOGG2PlcGZbQG723+B6sBFXPNDvxk7Xewf+dReBUPFe+Oyk3obu7HP58/T3WSb81F2S8LmXPxJAdYjJo6OiH95ipWlPHQdJzsQUunGSsaRimW4SHg0B4WhbddyC7gC7h86CEZqTjC3yDB7mEcfuMknPt8kNO1CCg4c+BjyIURVLzG9XoYS95htvLys5NrQIA3NA45D7DN4bl0pQXglgJYkM07xpgKNAaYcScL6xxO7V2sNQXmnDNPrwsphr6QC3lFgJzCMS3SCGaxdKTm8qAHGY17r/oTzCFNf/eIEwSiaKzF70VeoySz10ICoyhJz8GfKTE+MEWPrldNsjOtCONYnONEsD4DTTMeE2CRrxhLTelo+O3n0HpODqVge/laXD74GXpT3GStzFtBam+/3kDWbIGZ2FZWjfO/O4eoOci8EfCseQ1Gm0dw6/VmqgG7JxNPrXPy1UyJAHgeBXFiNSq96TTXaUyLQJJM9zrN0pjOvSpbsiAm6aE5KrWrADyx2+AOsKctD3pg2f4Y+Ys55t6f7qKpEaj8Fc9vKBBAfe1HqGKs65zLQ3qDrVwzVLZHJ6IBN45tPY1qjYjMGkbFf17+HOkrgNJtPAWP7gwzNu1G2bKnpkZA0PcQCUIRyK9JIlI4oUyQjKCTiuZAgohUHaNMwwiTRER6hekRYI/sZisiHRL8thiNmEfYazQqw9s9wttwWESOxYFgB9t8xGKkzT6eRlZ9PW7ehl0S5psz4W8dhCmde5Eey4A8GmQ0PU56w10i7BbbNCJipFBSUIDo3mxcO9xLRbihoBy56XPxhx+cZMoV2BnDaSSj9bkr7GIYAVuWrKEcn/j+aSKiOaZM7Kj+Ng784ih8qpc44sWna/Dg5ig+rW9kGAE5s7JQsjf/SSK60dYG+ZUHqFrBY9JafwWNrRKeeV+hCASHPMRwzn1eOBfwfjq//xyloOoDXsD++4/I+MJ3vDBn8D79cM8pLBhej21f20HO9rJaa2y+j7yCaUQUioVhdLB2s/Pcxe1hBOUwTDP1/DFDY3EPCrO0dzovwrAlSA6YZnCMnKXCzVZuYrs6YwrHBIwaRkKKzcz8UWCxpiAUjk6vAb24kolII51YEtEIXFZ1WdQxehcm9jlqlGMTemK8NbVdlpYC7f7JNmSalhYsRPBwJhpMw6SozLAMWbZMfLL7HGmzRC3YteYbOPP7s2iT3GRtjXE18cCFVy+SmrRYGnauWo/3f/43hKUg1dJ6ew18qRF88PdT5JLdKuGVLS9wGp3kAdbD/iAcPRWYZ7TyB0yBj21ZlwTryPN4PIK+MS/me6qRI5p4RctB+i2NfEs/JkTYjsqNH50qhZX2hyruVimYMzKGda0xMuSaGYXPG0j0ojRBAj19g5idm4N8Zy6F6+LFSxjoG0Bd3WbKnd/vx7Fjx5lch8zMDBgMBpw5c5acq61dzRyM49HoCC4dPI43UcX2DCZK1MuXLqOI7Yu3opCS1OweQkuXC5WrSqfviDgTKXpoSKScqYkxQeT7XE0WdOYS9Dkco0LU5kxWBO2PhSRZxVQ+1g5RtGtOm2HF8OC9yYJiXZFmN6Gru4eMBcb9yJ+XCZfLhfEAD32KzF8A3T29JLt9bjgWOnCh6TFmsZOBlgIlx44Bv4Cbo0OEuSN54UhP5RXPzEjaQVGNxqSqisW0Gg/Lj/Yob2MRHc2aW3vJYZPswLJdNbjT2sMcCFGBFX6zjpS2dfbTXGvKXBTv3oCmW/cxFopSeHaU5FHOO3sGCetIs2HlysVQIzGWaoEdUiWDwg6KsNtSsGFd5ROH0+KSBZNjcSWxk5k4T2ifsrKiKRhnwbxJwo/pmwY959oczbhmk2xveX7tR+XF2vE8ZtLOaviCj+fEaWzlRkkKX7/T+en/AG4n/dbyvMi4AAAAAElFTkSuQmCC"> 
+
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .cell-container {
+            border: 2px solid black;
+            flex-wrap: wrap;
+            background: wheat;
+            border-radius: 5px;
+            display: flex;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .cell {
+            box-sizing: border-box;
+            background: transparent;
+            border: 2px solid black;
+            margin: 0;
+            padding: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+
+            &[disabled] {
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="requestContainer"></div>
+    <div id="cellContainer" class="cell-container"></div>
+    <button id="newGameBtn" style="display: none;"></button>
+
+    <script type="module">
+        const colors = [];
+        const milestones = [];
+        const completedMilestones = new Map();
+        const cellContainer = document.getElementById("cellContainer");
+        const requestContainer = document.getElementById("requestContainer");
+        const newGameBtn = document.getElementById("newGameBtn");
+
+        newGameBtn.onclick = () => newGame();
+
+        let level = 1;
+
+        for (let r = 0; r < 256; r += 85) {
+            for (let g = 0; g < 256; g += 85) {
+                for (let b = 0; b < 256; b += 85) {
+                    if (r !== g && g !== b && r !== b && r + g + b < 400) {
+                        colors.push(`#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`)
+                    }
+                }
+            }
+        }
+
+        shuffle(colors);
+
+        const cells = [];
+
+        function shuffle(arr) {
+            for (let i = arr.length - 1; i > 0; --i) {
+                const r = rand(0, i);
+                [arr[r], arr[i]] = [arr[i], arr[r]];
+            }
+
+            return arr;
+        }
+
+        function render() {
+            const milestone = milestones.at(0);
+            const actionText = milestone?.action === 'allocate' ? 'Allocate' : 'Free';
+
+            requestContainer.innerHTML = milestone ? `${actionText} <span style="color: ${milestone.color}">${milestone.size} bytes</span>.` : 'You won!';
+
+            cellContainer.innerHTML = cells.map(x => `<button class="cell" style="background: ${x ?? 'gray'}"></button>`).join('');
+
+            if (milestone) {
+                if (milestone.action === 'allocate') {
+                    let maxFreeSpace = 0;
+
+                    for (const x of cells) {
+                        if (x === null) {
+                            ++maxFreeSpace;
+
+                            if (maxFreeSpace >= milestone.size) {
+                                break;
+                            }
+                        } else {
+                            maxFreeSpace = 0;
+                        }
+                    }
+
+                    if (maxFreeSpace < milestone.size) {
+                        requestContainer.innerHTML += ' You lost, no contiguous free block to allocate.';
+                        newGameBtn.style.display = '';
+                        newGameBtn.innerText = 'Start a new game';
+                        level = 1;
+                        return;
+                    }
+
+                    function check(i) {
+                        const slice = cells.slice(i, i + milestone.size);
+                        return slice.length >= milestone.size && slice.every(x => x === null);
+                    }
+
+                    cells.forEach((x, i) => {
+                        if (x === null) {
+                            cellContainer.children[i].onclick = () => {
+                                if (check(i)) {
+                                    cells.fill(milestone.color, i, i + milestone.size);
+                                    completedMilestones.set(milestone.id, i);
+                                    milestones.shift();
+                                    render();
+                                }
+                            }
+
+                            cellContainer.children[i].onmouseenter = () => {
+                                if (check(i)) {
+                                    for (let o = 0; o < milestone.size; ++o) {
+                                        cellContainer.children[i + o].dataset.color = cellContainer.children[i + o].style.background;
+                                        cellContainer.children[i + o].style.background = milestone.color;
+                                    }
+                                }
+                            }
+
+                            cellContainer.children[i].onmouseleave = () => {
+                                if (check(i)) {
+                                    for (let o = 0; o < milestone.size; ++o) {
+                                        cellContainer.children[i + o].style.background = cellContainer.children[i + o].dataset.color;
+                                    }
+                                }
+                            };
+                        } else {
+                            cellContainer.children[i].disabled = true;
+                        }
+                    });
+                } else {
+                    const index = completedMilestones.get(milestone.id);
+                    cells.forEach((x, i) => {
+                        if (i >= index && i < index + milestone.size) {
+                            cellContainer.children[i].onclick = () => {
+                                cells.fill(null, index, index + milestone.size);
+                                milestones.shift();
+                                render();
+                            }
+                        } else {
+                            cellContainer.children[i].disabled = true
+                        }
+                    });
+                }
+            } else {
+                newGameBtn.style.display = '';
+                newGameBtn.innerText = 'Next level';
+                ++level;
+            }
+        }
+
+        function rand(min, max) {
+            return min + Math.floor(Math.random() * (max - min + 1));
+        }
+
+        function newGame() {
+            let id = 1;
+            const finalAllocationsCount = level + 2;
+            cells.length = (level + 4) ** 2;
+            cells.fill(null);
+            milestones.length = 0;
+            completedMilestones.clear();
+            newGameBtn.style.display = 'none';
+
+            const finalAllocations = [cells.length];
+
+            while (finalAllocations.length < finalAllocationsCount) {
+                const last = finalAllocations.pop();
+                const value = rand(finalAllocationsCount - finalAllocations.length, last - 1);
+                finalAllocations.push(last - value, value);
+            }
+
+            shuffle(finalAllocations);
+
+            let colorIndex = 0;
+
+            function nextColor() {
+                return colors[colorIndex++ % colors.length];
+            }
+
+            const freeBlocks = [];
+            let sum = 0;
+            const allocatedBlocks = finalAllocations.map(x => {
+                const ret = {
+                    start: sum,
+                    end: sum + x,
+                    color: nextColor(),
+                    id: id++,
+                };
+
+                sum += x;
+
+                return ret;
+            });
+
+            function allocateRandomly() {
+                const i = rand(0, freeBlocks.length - 1);
+                const block = freeBlocks[i];
+
+                const start = rand(block.start, block.end - 1);
+                const end = rand(start + 1, block.end);
+
+                if (start === block.start && end === block.end) {
+                    freeBlocks.splice(i, 1);
+                } else if (start === block.start) {
+                    block.start = end;
+                } else if (end === block.end) {
+                    block.end = start;
+                } else {
+                    freeBlocks.splice(i, 1, { start: block.start, end: start }, { start: end, end: block.end });
+                }
+
+                return {
+                    start,
+                    end,
+                    color: nextColor(),
+                    id: id++,
+                };
+            }
+
+            function mergeBlocks(block) {
+                const prevBlockIndex = freeBlocks.findLastIndex(x => x.end <= block.start);
+                const nextBlockIndex = freeBlocks.findIndex(x => x.start >= block.end);
+
+                if (prevBlockIndex === -1 && nextBlockIndex === -1) {
+                    freeBlocks.push(block);
+                } else if (prevBlockIndex === -1) {
+                    if (freeBlocks[nextBlockIndex].start === block.end) {
+                        freeBlocks[nextBlockIndex].start = block.start;
+                    } else {
+                        freeBlocks.splice(nextBlockIndex, 0, block);
+                    }
+                } else if (nextBlockIndex === -1) {
+                    if (freeBlocks[prevBlockIndex].end === block.start) {
+                        freeBlocks[prevBlockIndex].end = block.end;
+                    } else {
+                        freeBlocks.splice(prevBlockIndex + 1, 0, block);
+                    }
+                } else {
+                    if (freeBlocks[prevBlockIndex].end === block.start && freeBlocks[nextBlockIndex].start === block.end) {
+                        freeBlocks[prevBlockIndex].end = freeBlocks[nextBlockIndex].start;
+                        freeBlocks.splice(nextBlockIndex, 1);
+                    } else if (freeBlocks[prevBlockIndex].end === block.start) {
+                        freeBlocks[prevBlockIndex].end = block.end;
+                    } else if (freeBlocks[nextBlockIndex].start === block.end) {
+                        freeBlocks[nextBlockIndex].start = block.start;
+                    } else {
+                        freeBlocks.splice(nextBlockIndex, 0, block);
+                    }
+                }
+            }
+
+            while (allocatedBlocks.length) {
+                if (freeBlocks.length && milestones.length < 3 * finalAllocationsCount && Math.random() < 0.5) {
+                    const block = allocateRandomly();
+                    milestones.push({
+                        action: 'delete',
+                        color: block.color,
+                        id: block.id,
+                        size: block.end - block.start,
+                    });
+                    allocatedBlocks.push(block);
+                } else {
+                    const deletedBlock = allocatedBlocks.splice(rand(0, allocatedBlocks.length - 1), 1)[0];
+                    milestones.push({
+                        action: 'allocate',
+                        color: deletedBlock.color,
+                        id: deletedBlock.id,
+                        size: deletedBlock.end - deletedBlock.start
+                    });
+                    mergeBlocks({
+                        start: deletedBlock.start,
+                        end: deletedBlock.end,
+                    });
+                }
+            }
+
+            milestones.reverse();
+            render();
+        }
+
+        newGame();
+    </script>
+</body>
+
+
+
+</html>
