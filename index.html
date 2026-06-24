@@ -323,7 +323,7 @@
             }
 
             while (allocatedBlocks.length) {
-                if (freeBlocks.length && milestones.length < 3 * finalAllocationsCount && Math.random() < 0.5) {
+                if (freeBlocks.length && milestones.length < 1.5 * finalAllocationsCount && Math.random() < 0.4) {
                     const block = allocateRandomly();
                     milestones.push({
                         action: 'delete',
@@ -348,6 +348,17 @@
             }
 
             milestones.reverse();
+            sum = 0;
+            milestones.length = milestones.findIndex(x => {
+                if (x.action === 'allocate') {
+                    sum += x.size;
+                } else {
+                    sum -= x.size;
+                }
+
+                return sum === cells.length;
+            }) + 1;
+
             render();
         }
 
