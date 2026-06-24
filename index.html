@@ -4,7 +4,7 @@
 <head>
 	<title>Allocator</title>
 
-	<meta name="viewport" content="width=375, maximum-scale=1">
+	<meta name="viewport" content="width=428, maximum-scale=1">
 	<meta name="description"
 		content="A game where you have to allocate memory. Each new level becomes more and more challenging.">
 	<link rel="icon"
@@ -38,6 +38,12 @@
 			padding: 0;
 			width: 20px;
 			height: 20px;
+
+			@media screen and (max-width: 500px) {
+				width: 40px;
+				height: 40px;
+			}
+
 			border-radius: 5px;
 
 			&:not(.clickable) {
