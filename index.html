@@ -2,499 +2,499 @@
 <html lang="en">
 
 <head>
-    <title>Allocator</title>
+	<title>Allocator</title>
 
-    <meta name="viewport" content="width=428, maximum-scale=1">
-    <meta name="description"
-        content="A game where you have to allocate memory. Each new level becomes more and more challenging.">
-    <link rel="icon"
-        href="data:image/png;base64,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">
+	<meta name="viewport" content="width=428, maximum-scale=1">
+	<meta name="description"
+		content="A game where you have to allocate memory. Each new level becomes more and more challenging.">
+	<link rel="icon"
+		href="data:image/png;base64,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">
 
 
-    <style>
-        body {
-            text-align: center;
-            touch-action: none;
-            overscroll-behavior: none;
-        }
+	<style>
+		body {
+			text-align: center;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
 
-        button {
-            cursor: pointer;
-        }
+		button {
+			cursor: pointer;
+		}
 
-        .cell-container {
-            border: 2px solid black;
-            flex-wrap: wrap;
-            background: wheat;
-            border-radius: 5px;
-            display: inline-flex;
-            padding: 10px;
-            margin: 10px;
-        }
+		.cell-container {
+			border: 2px solid black;
+			flex-wrap: wrap;
+			background: wheat;
+			border-radius: 5px;
+			display: inline-flex;
+			padding: 10px;
+			margin: 10px;
+		}
 
-        .cell {
-            box-sizing: border-box;
-            background: transparent;
-            border: 2px solid black;
-            margin: 0;
-            padding: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 5px;
+		.cell {
+			box-sizing: border-box;
+			background: transparent;
+			border: 2px solid black;
+			margin: 0;
+			padding: 0;
+			width: 20px;
+			height: 20px;
+			border-radius: 5px;
 
-            &:not(.clickable) {
-                cursor: default;
-            }
+			&:not(.clickable) {
+				cursor: default;
+			}
 
-            &[disabled] {
-                opacity: 0.4;
-            }
-        }
+			&[disabled] {
+				opacity: 0.4;
+			}
+		}
 
-        .allocator-reference {
-            max-width: 900px;
-            margin: 24px auto;
-            padding: 16px 20px;
-            text-align: left;
-            border: 2px solid black;
-            border-radius: 8px;
-            background: #fff8e8;
-            line-height: 1.5;
-        }
+		.allocator-reference {
+			max-width: 900px;
+			margin: 24px auto;
+			padding: 16px 20px;
+			text-align: left;
+			border: 2px solid black;
+			border-radius: 8px;
+			background: #fff8e8;
+			line-height: 1.5;
+		}
 
-        .allocator-reference summary {
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-align: center;
-        }
+		.allocator-reference summary {
+			cursor: pointer;
+			font-size: 1.2rem;
+			font-weight: bold;
+			text-align: center;
+		}
 
-        .allocator-reference h2,
-        .allocator-reference h3 {
-            text-align: center;
-        }
+		.allocator-reference h2,
+		.allocator-reference h3 {
+			text-align: center;
+		}
 
-        .allocator-reference table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-            margin: 12px 0;
-        }
+		.allocator-reference table {
+			width: 100%;
+			border-collapse: collapse;
+			table-layout: fixed;
+			margin: 12px 0;
+		}
 
-        .allocator-reference th,
-        .allocator-reference td {
-            border: 1px solid #333;
-            padding: 8px;
-            vertical-align: top;
-            overflow-wrap: break-word;
-        }
+		.allocator-reference th,
+		.allocator-reference td {
+			border: 1px solid #333;
+			padding: 8px;
+			vertical-align: top;
+			overflow-wrap: break-word;
+		}
 
-        .allocator-reference th {
-            background: wheat;
-        }
+		.allocator-reference th {
+			background: wheat;
+		}
 
-        .allocator-reference code {
-            background: #eee;
-            padding: 1px 4px;
-            border-radius: 3px;
-        }
-    </style>
+		.allocator-reference code {
+			background: #eee;
+			padding: 1px 4px;
+			border-radius: 3px;
+		}
+	</style>
 </head>
 
 <body>
-    <div id="requestContainer"></div>
-    <div id="cellContainer" class="cell-container"></div><br>
-    <button id="newGameBtn" style="display: none;"></button>
+	<div id="requestContainer"></div>
+	<div id="cellContainer" class="cell-container"></div><br>
+	<button id="newGameBtn" style="display: none;"></button>
 
-    <script type="module">
-        const colors = [];
-        const milestones = [];
-        const completedMilestones = new Map();
-        const cellContainer = document.getElementById("cellContainer");
-        const requestContainer = document.getElementById("requestContainer");
-        const newGameBtn = document.getElementById("newGameBtn");
+	<script type="module">
+		const colors = [];
+		const milestones = [];
+		const completedMilestones = new Map();
+		const cellContainer = document.getElementById("cellContainer");
+		const requestContainer = document.getElementById("requestContainer");
+		const newGameBtn = document.getElementById("newGameBtn");
 
-        newGameBtn.onclick = () => newGame();
+		newGameBtn.onclick = () => newGame();
 
-        let level = 1;
+		let level = 1;
 
-        for (let r = 0; r < 256; r += 85) {
-            for (let g = 0; g < 256; g += 85) {
-                for (let b = 0; b < 256; b += 85) {
-                    if (r !== g && g !== b && r !== b && r + g + b < 400) {
-                        colors.push(`#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`)
-                    }
-                }
-            }
-        }
+		for (let r = 0; r < 256; r += 85) {
+			for (let g = 0; g < 256; g += 85) {
+				for (let b = 0; b < 256; b += 85) {
+					if (r !== g && g !== b && r !== b && r + g + b < 400) {
+						colors.push(`#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`)
+					}
+				}
+			}
+		}
 
-        shuffle(colors);
+		shuffle(colors);
 
-        const cells = [];
+		const cells = [];
 
-        function shuffle(arr) {
-            for (let i = arr.length - 1; i > 0; --i) {
-                const r = rand(0, i);
-                [arr[r], arr[i]] = [arr[i], arr[r]];
-            }
+		function shuffle(arr) {
+			for (let i = arr.length - 1; i > 0; --i) {
+				const r = rand(0, i);
+				[arr[r], arr[i]] = [arr[i], arr[r]];
+			}
 
-            return arr;
-        }
+			return arr;
+		}
 
-        function render() {
-            const milestone = milestones.at(0);
-            const actionText = milestone?.action === 'allocate' ? 'Allocate' : 'Free';
+		function render() {
+			const milestone = milestones.at(0);
+			const actionText = milestone?.action === 'allocate' ? 'Allocate' : 'Free';
 
-            requestContainer.innerHTML = milestone ? `${actionText} <span style="color: ${milestone.color}">${milestone.size} bytes</span>.` : 'You won!';
+			requestContainer.innerHTML = milestone ? `${actionText} <span style="color: ${milestone.color}">${milestone.size} bytes</span>.` : 'You won!';
 
-            cellContainer.innerHTML = cells.map(x => `<button class="cell" style="background: ${x ?? 'gray'}"></button>`).join('');
+			cellContainer.innerHTML = cells.map(x => `<button class="cell" style="background: ${x ?? 'gray'}"></button>`).join('');
 
-            if (milestone) {
-                if (milestone.action === 'allocate') {
-                    let maxFreeSpace = 0;
+			if (milestone) {
+				if (milestone.action === 'allocate') {
+					let maxFreeSpace = 0;
 
-                    for (const x of cells) {
-                        if (x === null) {
-                            ++maxFreeSpace;
+					for (const x of cells) {
+						if (x === null) {
+							++maxFreeSpace;
 
-                            if (maxFreeSpace >= milestone.size) {
-                                break;
-                            }
-                        } else {
-                            maxFreeSpace = 0;
-                        }
-                    }
+							if (maxFreeSpace >= milestone.size) {
+								break;
+							}
+						} else {
+							maxFreeSpace = 0;
+						}
+					}
 
-                    if (maxFreeSpace < milestone.size) {
-                        requestContainer.innerHTML += ' You lost, no contiguous free block to allocate.';
-                        newGameBtn.style.display = '';
-                        newGameBtn.innerText = 'Start a new game';
-                        level = 1;
-                        return;
-                    }
+					if (maxFreeSpace < milestone.size) {
+						requestContainer.innerHTML += ' You lost, no contiguous free block to allocate.';
+						newGameBtn.style.display = '';
+						newGameBtn.innerText = 'Start a new game';
+						level = 1;
+						return;
+					}
 
-                    function check(i) {
-                        const slice = cells.slice(i, i + milestone.size);
-                        return slice.length >= milestone.size && slice.every(x => x === null);
-                    }
+					function check(i) {
+						const slice = cells.slice(i, i + milestone.size);
+						return slice.length >= milestone.size && slice.every(x => x === null);
+					}
 
-                    let lastHoveredCell = null;
+					let lastHoveredCell = null;
 
-                    cellContainer.ontouchmove = ev => {
-                        const cellCandidate = document.elementFromPoint(ev.touches[0].clientX, ev.touches[0].clientY);
-                        
-                        if (cellCandidate !== lastHoveredCell) {
-                            lastHoveredCell?.onmouseleave?.();
-                            lastHoveredCell = null;
+					cellContainer.ontouchmove = ev => {
+						const cellCandidate = document.elementFromPoint(ev.touches[0].clientX, ev.touches[0].clientY);
 
-                            if (cellCandidate instanceof HTMLButtonElement && cellContainer.contains(cellCandidate)) {
-                                lastHoveredCell = cellCandidate;
-                                lastHoveredCell.onmouseenter?.();
-                            }
-                        }
-                    }
+						if (cellCandidate !== lastHoveredCell) {
+							lastHoveredCell?.onmouseleave?.();
+							lastHoveredCell = null;
 
-                    cellContainer.ontouchend = cellContainer.ontouchcancel = () => {
-                        lastHoveredCell?.click();
-                    };
+							if (cellCandidate instanceof HTMLButtonElement && cellContainer.contains(cellCandidate)) {
+								lastHoveredCell = cellCandidate;
+								lastHoveredCell.onmouseenter?.();
+							}
+						}
+					}
 
-                    cells.forEach((x, i) => {
-                        if (x === null) {
-                            cellContainer.children[i].classList.add('clickable');
-                            cellContainer.children[i].onclick = () => {
-                                if (check(i)) {
-                                    cells.fill(milestone.color, i, i + milestone.size);
-                                    completedMilestones.set(milestone.id, i);
-                                    milestones.shift();
-                                    render();
-                                }
-                            }
+					cellContainer.ontouchend = cellContainer.ontouchcancel = () => {
+						lastHoveredCell?.click();
+					};
 
-                            cellContainer.children[i].onmouseenter = () => {
-                                if (check(i)) {
-                                    for (let o = 0; o < milestone.size; ++o) {
-                                        cellContainer.children[i + o].dataset.color = cellContainer.children[i + o].style.background;
-                                        cellContainer.children[i + o].style.background = milestone.color;
-                                    }
-                                }
-                            }
+					cells.forEach((x, i) => {
+						if (x === null) {
+							cellContainer.children[i].classList.add('clickable');
+							cellContainer.children[i].onclick = () => {
+								if (check(i)) {
+									cells.fill(milestone.color, i, i + milestone.size);
+									completedMilestones.set(milestone.id, i);
+									milestones.shift();
+									render();
+								}
+							}
 
-                            cellContainer.children[i].onmouseleave = () => {
-                                if (check(i)) {
-                                    for (let o = 0; o < milestone.size; ++o) {
-                                        cellContainer.children[i + o].style.background = cellContainer.children[i + o].dataset.color;
-                                    }
-                                }
-                            };
-                        } else {
-                            cellContainer.children[i].disabled = true;
-                        }
-                    });
-                } else {
-                    const index = completedMilestones.get(milestone.id);
-                    cells.forEach((x, i) => {
-                        if (i >= index && i < index + milestone.size) {
-                            cellContainer.children[i].classList.add('clickable');
-                            cellContainer.children[i].onclick = () => {
-                                cells.fill(null, index, index + milestone.size);
-                                milestones.shift();
-                                render();
-                            }
-                        } else {
-                            cellContainer.children[i].disabled = true
-                        }
-                    });
-                }
-            } else {
-                newGameBtn.style.display = '';
-                newGameBtn.innerText = 'Next level';
-                ++level;
-            }
-        }
+							cellContainer.children[i].onmouseenter = () => {
+								if (check(i)) {
+									for (let o = 0; o < milestone.size; ++o) {
+										cellContainer.children[i + o].dataset.color = cellContainer.children[i + o].style.background;
+										cellContainer.children[i + o].style.background = milestone.color;
+									}
+								}
+							}
 
-        function rand(min, max) {
-            return min + Math.floor(Math.random() * (max - min + 1));
-        }
+							cellContainer.children[i].onmouseleave = () => {
+								if (check(i)) {
+									for (let o = 0; o < milestone.size; ++o) {
+										cellContainer.children[i + o].style.background = cellContainer.children[i + o].dataset.color;
+									}
+								}
+							};
+						} else {
+							cellContainer.children[i].disabled = true;
+						}
+					});
+				} else {
+					const index = completedMilestones.get(milestone.id);
+					cells.forEach((x, i) => {
+						if (i >= index && i < index + milestone.size) {
+							cellContainer.children[i].classList.add('clickable');
+							cellContainer.children[i].onclick = () => {
+								cells.fill(null, index, index + milestone.size);
+								milestones.shift();
+								render();
+							}
+						} else {
+							cellContainer.children[i].disabled = true
+						}
+					});
+				}
+			} else {
+				newGameBtn.style.display = '';
+				newGameBtn.innerText = 'Next level';
+				++level;
+			}
+		}
 
-        function newGame() {
-            let id = 1;
-            const finalAllocationsCount = level + 2;
-            cells.length = (level + 4) ** 2;
-            cells.fill(null);
-            milestones.length = 0;
-            completedMilestones.clear();
-            newGameBtn.style.display = 'none';
+		function rand(min, max) {
+			return min + Math.floor(Math.random() * (max - min + 1));
+		}
 
-            const finalAllocations = [cells.length];
+		function newGame() {
+			let id = 1;
+			const finalAllocationsCount = level + 2;
+			cells.length = (level + 4) ** 2;
+			cells.fill(null);
+			milestones.length = 0;
+			completedMilestones.clear();
+			newGameBtn.style.display = 'none';
 
-            while (finalAllocations.length < finalAllocationsCount) {
-                const last = finalAllocations.pop();
-                const value = rand(finalAllocationsCount - finalAllocations.length, last - 1);
-                finalAllocations.push(last - value, value);
-            }
+			const finalAllocations = [cells.length];
 
-            shuffle(finalAllocations);
+			while (finalAllocations.length < finalAllocationsCount) {
+				const last = finalAllocations.pop();
+				const value = rand(finalAllocationsCount - finalAllocations.length, last - 1);
+				finalAllocations.push(last - value, value);
+			}
 
-            let colorIndex = 0;
+			shuffle(finalAllocations);
 
-            function nextColor() {
-                return colors[colorIndex++ % colors.length];
-            }
+			let colorIndex = 0;
 
-            const freeBlocks = [];
-            let sum = 0;
-            const allocatedBlocks = finalAllocations.map(x => {
-                const ret = {
-                    start: sum,
-                    end: sum + x,
-                    color: nextColor(),
-                    id: id++,
-                };
+			function nextColor() {
+				return colors[colorIndex++ % colors.length];
+			}
 
-                sum += x;
+			const freeBlocks = [];
+			let sum = 0;
+			const allocatedBlocks = finalAllocations.map(x => {
+				const ret = {
+					start: sum,
+					end: sum + x,
+					color: nextColor(),
+					id: id++,
+				};
 
-                return ret;
-            });
+				sum += x;
 
-            function allocateRandomly() {
-                const i = rand(0, freeBlocks.length - 1);
-                const block = freeBlocks[i];
+				return ret;
+			});
 
-                const start = rand(block.start, block.end - 1);
-                const end = rand(start + 1, block.end);
+			function allocateRandomly() {
+				const i = rand(0, freeBlocks.length - 1);
+				const block = freeBlocks[i];
 
-                if (start === block.start && end === block.end) {
-                    freeBlocks.splice(i, 1);
-                } else if (start === block.start) {
-                    block.start = end;
-                } else if (end === block.end) {
-                    block.end = start;
-                } else {
-                    freeBlocks.splice(i, 1, { start: block.start, end: start }, { start: end, end: block.end });
-                }
+				const start = rand(block.start, block.end - 1);
+				const end = rand(start + 1, block.end);
 
-                return {
-                    start,
-                    end,
-                    color: nextColor(),
-                    id: id++,
-                };
-            }
+				if (start === block.start && end === block.end) {
+					freeBlocks.splice(i, 1);
+				} else if (start === block.start) {
+					block.start = end;
+				} else if (end === block.end) {
+					block.end = start;
+				} else {
+					freeBlocks.splice(i, 1, { start: block.start, end: start }, { start: end, end: block.end });
+				}
 
-            function mergeBlocks(block) {
-                const prevBlockIndex = freeBlocks.findLastIndex(x => x.end <= block.start);
-                const nextBlockIndex = freeBlocks.findIndex(x => x.start >= block.end);
+				return {
+					start,
+					end,
+					color: nextColor(),
+					id: id++,
+				};
+			}
 
-                if (prevBlockIndex === -1 && nextBlockIndex === -1) {
-                    freeBlocks.push(block);
-                } else if (prevBlockIndex === -1) {
-                    if (freeBlocks[nextBlockIndex].start === block.end) {
-                        freeBlocks[nextBlockIndex].start = block.start;
-                    } else {
-                        freeBlocks.splice(nextBlockIndex, 0, block);
-                    }
-                } else if (nextBlockIndex === -1) {
-                    if (freeBlocks[prevBlockIndex].end === block.start) {
-                        freeBlocks[prevBlockIndex].end = block.end;
-                    } else {
-                        freeBlocks.splice(prevBlockIndex + 1, 0, block);
-                    }
-                } else {
-                    if (freeBlocks[prevBlockIndex].end === block.start && freeBlocks[nextBlockIndex].start === block.end) {
-                        freeBlocks[prevBlockIndex].end = freeBlocks[nextBlockIndex].start;
-                        freeBlocks.splice(nextBlockIndex, 1);
-                    } else if (freeBlocks[prevBlockIndex].end === block.start) {
-                        freeBlocks[prevBlockIndex].end = block.end;
-                    } else if (freeBlocks[nextBlockIndex].start === block.end) {
-                        freeBlocks[nextBlockIndex].start = block.start;
-                    } else {
-                        freeBlocks.splice(nextBlockIndex, 0, block);
-                    }
-                }
-            }
+			function mergeBlocks(block) {
+				const prevBlockIndex = freeBlocks.findLastIndex(x => x.end <= block.start);
+				const nextBlockIndex = freeBlocks.findIndex(x => x.start >= block.end);
 
-            while (allocatedBlocks.length) {
-                if (freeBlocks.length && milestones.length < 1.5 * finalAllocationsCount && Math.random() < 0.4) {
-                    const block = allocateRandomly();
-                    milestones.push({
-                        action: 'delete',
-                        color: block.color,
-                        id: block.id,
-                        size: block.end - block.start,
-                    });
-                    allocatedBlocks.push(block);
-                } else {
-                    const deletedBlock = allocatedBlocks.splice(rand(0, allocatedBlocks.length - 1), 1)[0];
-                    milestones.push({
-                        action: 'allocate',
-                        color: deletedBlock.color,
-                        id: deletedBlock.id,
-                        size: deletedBlock.end - deletedBlock.start
-                    });
-                    mergeBlocks({
-                        start: deletedBlock.start,
-                        end: deletedBlock.end,
-                    });
-                }
-            }
+				if (prevBlockIndex === -1 && nextBlockIndex === -1) {
+					freeBlocks.push(block);
+				} else if (prevBlockIndex === -1) {
+					if (freeBlocks[nextBlockIndex].start === block.end) {
+						freeBlocks[nextBlockIndex].start = block.start;
+					} else {
+						freeBlocks.splice(nextBlockIndex, 0, block);
+					}
+				} else if (nextBlockIndex === -1) {
+					if (freeBlocks[prevBlockIndex].end === block.start) {
+						freeBlocks[prevBlockIndex].end = block.end;
+					} else {
+						freeBlocks.splice(prevBlockIndex + 1, 0, block);
+					}
+				} else {
+					if (freeBlocks[prevBlockIndex].end === block.start && freeBlocks[nextBlockIndex].start === block.end) {
+						freeBlocks[prevBlockIndex].end = freeBlocks[nextBlockIndex].start;
+						freeBlocks.splice(nextBlockIndex, 1);
+					} else if (freeBlocks[prevBlockIndex].end === block.start) {
+						freeBlocks[prevBlockIndex].end = block.end;
+					} else if (freeBlocks[nextBlockIndex].start === block.end) {
+						freeBlocks[nextBlockIndex].start = block.start;
+					} else {
+						freeBlocks.splice(nextBlockIndex, 0, block);
+					}
+				}
+			}
 
-            milestones.reverse();
-            sum = 0;
-            milestones.length = milestones.findIndex(x => {
-                if (x.action === 'allocate') {
-                    sum += x.size;
-                } else {
-                    sum -= x.size;
-                }
+			while (allocatedBlocks.length) {
+				if (freeBlocks.length && milestones.length < 1.5 * finalAllocationsCount && Math.random() < 0.4) {
+					const block = allocateRandomly();
+					milestones.push({
+						action: 'delete',
+						color: block.color,
+						id: block.id,
+						size: block.end - block.start,
+					});
+					allocatedBlocks.push(block);
+				} else {
+					const deletedBlock = allocatedBlocks.splice(rand(0, allocatedBlocks.length - 1), 1)[0];
+					milestones.push({
+						action: 'allocate',
+						color: deletedBlock.color,
+						id: deletedBlock.id,
+						size: deletedBlock.end - deletedBlock.start
+					});
+					mergeBlocks({
+						start: deletedBlock.start,
+						end: deletedBlock.end,
+					});
+				}
+			}
 
-                return sum === cells.length;
-            }) + 1;
+			milestones.reverse();
+			sum = 0;
+			milestones.length = milestones.findIndex(x => {
+				if (x.action === 'allocate') {
+					sum += x.size;
+				} else {
+					sum -= x.size;
+				}
 
-            render();
-        }
+				return sum === cells.length;
+			}) + 1;
 
-        newGame();
-    </script>
+			render();
+		}
 
-    <details class="allocator-reference">
-        <summary>Memory allocation reference</summary>
+		newGame();
+	</script>
 
-        <h2>Memory allocation reference</h2>
+	<details class="allocator-reference">
+		<summary>Memory allocation reference</summary>
 
-        <p>
-            A memory allocator manages a region of memory and decides where each new
-            allocation should go. When memory is allocated and freed over time, the free
-            space can become split into many small gaps. This is called
-            <strong>external fragmentation</strong>: there may be enough total free memory,
-            but not enough contiguous free memory for a request.
-        </p>
+		<h2>Memory allocation reference</h2>
 
-        <p>
-            There is no universally best allocation strategy. Real allocators usually
-            balance speed, memory usage, fragmentation, and implementation complexity.
-        </p>
+		<p>
+			A memory allocator manages a region of memory and decides where each new
+			allocation should go. When memory is allocated and freed over time, the free
+			space can become split into many small gaps. This is called
+			<strong>external fragmentation</strong>: there may be enough total free memory,
+			but not enough contiguous free memory for a request.
+		</p>
 
-        <h3>Common allocation strategies</h3>
+		<p>
+			There is no universally best allocation strategy. Real allocators usually
+			balance speed, memory usage, fragmentation, and implementation complexity.
+		</p>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Strategy</th>
-                    <th>Idea</th>
-                    <th>Pros</th>
-                    <th>Cons</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>First fit</strong></td>
-                    <td>Place the request in the first free block large enough to hold it.</td>
-                    <td>Simple and usually fast, because the search can stop early.</td>
-                    <td>Can leave many small holes near the beginning of memory.</td>
-                </tr>
-                <tr>
-                    <td><strong>Best fit</strong></td>
-                    <td>Choose the smallest free block that is large enough.</td>
-                    <td>Tries to avoid wasting large blocks.</td>
-                    <td>Usually slower, and may create tiny leftover fragments.</td>
-                </tr>
-                <tr>
-                    <td><strong>Worst fit</strong></td>
-                    <td>Choose the largest available free block.</td>
-                    <td>Tries to leave a remaining block that is still useful.</td>
-                    <td>Often breaks up large blocks unnecessarily and can perform poorly.</td>
-                </tr>
-                <tr>
-                    <td><strong>Next fit</strong></td>
-                    <td>Like first fit, but continue searching from the previous allocation position.</td>
-                    <td>Avoids repeatedly scanning from the start.</td>
-                    <td>Can still fragment memory and may miss better earlier holes.</td>
-                </tr>
-                <tr>
-                    <td><strong>Buddy allocator</strong></td>
-                    <td>Split memory into power-of-two blocks and merge neighboring buddies when freed.</td>
-                    <td>Fast splitting and merging.</td>
-                    <td>Can waste space because requests are rounded up.</td>
-                </tr>
-                <tr>
-                    <td><strong>Pool / slab allocator</strong></td>
-                    <td>Keep fixed-size blocks for objects of the same size.</td>
-                    <td>Very fast for repeated same-size allocations.</td>
-                    <td>Less flexible for varied allocation sizes.</td>
-                </tr>
-            </tbody>
-        </table>
+		<h3>Common allocation strategies</h3>
 
-        <h3>Key terms</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>Strategy</th>
+					<th>Idea</th>
+					<th>Pros</th>
+					<th>Cons</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><strong>First fit</strong></td>
+					<td>Place the request in the first free block large enough to hold it.</td>
+					<td>Simple and usually fast, because the search can stop early.</td>
+					<td>Can leave many small holes near the beginning of memory.</td>
+				</tr>
+				<tr>
+					<td><strong>Best fit</strong></td>
+					<td>Choose the smallest free block that is large enough.</td>
+					<td>Tries to avoid wasting large blocks.</td>
+					<td>Usually slower, and may create tiny leftover fragments.</td>
+				</tr>
+				<tr>
+					<td><strong>Worst fit</strong></td>
+					<td>Choose the largest available free block.</td>
+					<td>Tries to leave a remaining block that is still useful.</td>
+					<td>Often breaks up large blocks unnecessarily and can perform poorly.</td>
+				</tr>
+				<tr>
+					<td><strong>Next fit</strong></td>
+					<td>Like first fit, but continue searching from the previous allocation position.</td>
+					<td>Avoids repeatedly scanning from the start.</td>
+					<td>Can still fragment memory and may miss better earlier holes.</td>
+				</tr>
+				<tr>
+					<td><strong>Buddy allocator</strong></td>
+					<td>Split memory into power-of-two blocks and merge neighboring buddies when freed.</td>
+					<td>Fast splitting and merging.</td>
+					<td>Can waste space because requests are rounded up.</td>
+				</tr>
+				<tr>
+					<td><strong>Pool / slab allocator</strong></td>
+					<td>Keep fixed-size blocks for objects of the same size.</td>
+					<td>Very fast for repeated same-size allocations.</td>
+					<td>Less flexible for varied allocation sizes.</td>
+				</tr>
+			</tbody>
+		</table>
 
-        <ul>
-            <li><strong>Free block / hole:</strong> an unused region of memory.</li>
-            <li><strong>Allocation:</strong> reserving memory for a request.</li>
-            <li><strong>Deallocation / free:</strong> returning memory to the allocator.</li>
-            <li><strong>Splitting:</strong> using part of a free block and leaving the rest free.</li>
-            <li><strong>Coalescing:</strong> merging neighboring free blocks after deallocation.</li>
-            <li><strong>Internal fragmentation:</strong> wasted space inside an allocated block.</li>
-            <li><strong>External fragmentation:</strong> wasted space caused by free memory being split into small
-                non-contiguous pieces.</li>
-        </ul>
+		<h3>Key terms</h3>
 
-        <h3>Further reading</h3>
+		<ul>
+			<li><strong>Free block / hole:</strong> an unused region of memory.</li>
+			<li><strong>Allocation:</strong> reserving memory for a request.</li>
+			<li><strong>Deallocation / free:</strong> returning memory to the allocator.</li>
+			<li><strong>Splitting:</strong> using part of a free block and leaving the rest free.</li>
+			<li><strong>Coalescing:</strong> merging neighboring free blocks after deallocation.</li>
+			<li><strong>Internal fragmentation:</strong> wasted space inside an allocated block.</li>
+			<li><strong>External fragmentation:</strong> wasted space caused by free memory being split into small
+				non-contiguous pieces.</li>
+		</ul>
 
-        <ul>
-            <li>
-                <a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/8_MainMemory.html" target="_blank"
-                    rel="noreferrer">
-                    Operating Systems: Main Memory
-                </a>
-            </li>
-            <li>
-                <a href="https://www.cs.tufts.edu/~nr/cs257/archive/doug-lea/malloc.html" target="_blank"
-                    rel="noreferrer">
-                    Doug Lea: A Memory Allocator
-                </a>
-            </li>
-        </ul>
-    </details>
+		<h3>Further reading</h3>
+
+		<ul>
+			<li>
+				<a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/8_MainMemory.html" target="_blank"
+					rel="noreferrer">
+					Operating Systems: Main Memory
+				</a>
+			</li>
+			<li>
+				<a href="https://www.cs.tufts.edu/~nr/cs257/archive/doug-lea/malloc.html" target="_blank"
+					rel="noreferrer">
+					Doug Lea: A Memory Allocator
+				</a>
+			</li>
+		</ul>
+	</details>
 </body>
 
 
