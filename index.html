@@ -20,6 +20,11 @@
 			cursor: pointer;
 		}
 
+		.game-description {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+
 		.cell-container {
 			border: 2px solid black;
 			flex-wrap: wrap;
@@ -412,6 +417,13 @@
 
 		newGame();
 	</script>
+
+	<p class="game-description">
+		This is a game where you have to allocate and free contiguous memory blocks. You can hover or drag on free cells
+		to preview the allocated memory. If it's not possible to allocate a contiguous memory block, you lose and have
+		to start from the first level. If you succeed to allocate all the blocks, you win and can play the next level.
+		Each new level becomes more and more challenging.
+	</p>
 
 	<details class="allocator-reference">
 		<summary>Memory allocation reference</summary>
