@@ -4,7 +4,7 @@
 <head>
 	<title>Allocator</title>
 
-	<meta name="viewport" content="width=428, maximum-scale=1">
+	<meta name="viewport" content="width=375, maximum-scale=1">
 	<meta name="description"
 		content="A game where you have to allocate memory. Each new level becomes more and more challenging.">
 	<link rel="icon"
@@ -14,8 +14,6 @@
 	<style>
 		body {
 			text-align: center;
-			touch-action: none;
-			overscroll-behavior: none;
 		}
 
 		button {
@@ -181,6 +179,7 @@
 					let lastHoveredCell = null;
 
 					cellContainer.ontouchmove = ev => {
+						ev.preventDefault();
 						const cellCandidate = document.elementFromPoint(ev.touches[0].clientX, ev.touches[0].clientY);
 
 						if (cellCandidate !== lastHoveredCell) {
