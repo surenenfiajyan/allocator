@@ -162,6 +162,7 @@
 
 			requestContainer.innerHTML = milestone ? `${getMilestoneHtml(milestone)}.` : 'You won!';
 			cellContainer.innerHTML = cells.map(x => `<button class="cell" style="background: ${x ?? 'gray'}"></button>`).join('');
+			cellContainer.ontouchmove = cellContainer.ontouchend = cellContainer.ontouchcancel = null;
 
 			if (milestone) {
 				if (milestone.action === 'allocate') {
