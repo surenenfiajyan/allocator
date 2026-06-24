@@ -363,7 +363,7 @@
 					}
 				} else {
 					if (freeBlocks[prevBlockIndex].end === block.start && freeBlocks[nextBlockIndex].start === block.end) {
-						freeBlocks[prevBlockIndex].end = freeBlocks[nextBlockIndex].start;
+						freeBlocks[prevBlockIndex].end = freeBlocks[nextBlockIndex].end;
 						freeBlocks.splice(nextBlockIndex, 1);
 					} else if (freeBlocks[prevBlockIndex].end === block.start) {
 						freeBlocks[prevBlockIndex].end = block.end;
