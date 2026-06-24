@@ -14,6 +14,8 @@
     <style>
         body {
             text-align: center;
+            touch-action: none;
+            overscroll-behavior: none;
         }
 
         button {
@@ -175,6 +177,26 @@
                         const slice = cells.slice(i, i + milestone.size);
                         return slice.length >= milestone.size && slice.every(x => x === null);
                     }
+
+                    let lastHoveredCell = null;
+
+                    cellContainer.ontouchmove = ev => {
+                        const cellCandidate = document.elementFromPoint(ev.touches[0].clientX, ev.touches[0].clientY);
+                        
+                        if (cellCandidate !== lastHoveredCell) {
+                            lastHoveredCell?.onmouseleave?.();
+                            lastHoveredCell = null;
+
+                            if (cellCandidate instanceof HTMLButtonElement && cellContainer.contains(cellCandidate)) {
+                                lastHoveredCell = cellCandidate;
+                                lastHoveredCell.onmouseenter?.();
+                            }
+                        }
+                    }
+
+                    cellContainer.ontouchend = cellContainer.ontouchcancel = () => {
+                        lastHoveredCell?.click();
+                    };
 
                     cells.forEach((x, i) => {
                         if (x === null) {
