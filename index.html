@@ -122,11 +122,12 @@
 
 		let level = 1;
 
-		for (let r = 0; r < 256; r += 85) {
-			for (let g = 0; g < 256; g += 85) {
-				for (let b = 0; b < 256; b += 85) {
-					if (r !== g && g !== b && r !== b && r + g + b < 400) {
-						colors.push(`#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`)
+		for (let r = 0; r < 128; r += 42) {
+			for (let g = 0; g < 128; g += 42) {
+				for (let b = 0; b < 128; b += 42) {
+					if (r !== g && g !== b && r !== b && r + g + b < 200) {
+						colors.push(`#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`);
+						colors.push(`#${(2 * r).toString(16).padStart(2, '0')}${(2 * g).toString(16).padStart(2, '0')}${(2 * b).toString(16).padStart(2, '0')}`);
 					}
 				}
 			}
@@ -149,8 +150,12 @@
 			const milestone = milestones.at(0);
 			const actionText = milestone?.action === 'allocate' ? 'Allocate' : 'Free';
 
-			requestContainer.innerHTML = milestone ? `${actionText} <span style="color: ${milestone.color}">${milestone.size} bytes</span>.` : 'You won!';
+			function getMilestoneHtml(m) {
+				const actionText = m.action === 'allocate' ? 'Allocate' : 'Free';
+				return `${actionText} <span style="color: ${m.color}">${m.size} bytes</span>`
+			}
 
+			requestContainer.innerHTML = milestone ? `${getMilestoneHtml(milestone)}.` : 'You won!';
 			cellContainer.innerHTML = cells.map(x => `<button class="cell" style="background: ${x ?? 'gray'}"></button>`).join('');
 
 			if (milestone) {
@@ -246,9 +251,16 @@
 								render();
 							}
 						} else {
-							cellContainer.children[i].disabled = true
+							cellContainer.children[i].disabled = true;
 						}
 					});
+				}
+
+				if (milestones.length > 1) {
+					requestContainer.innerHTML += ' <button>Hint</button>';
+					requestContainer.querySelector('button').onclick = ev => {
+						ev.currentTarget.outerHTML = ` To do next: ${milestones.slice(1, 4).map(x => getMilestoneHtml(x)).join(', ')}.`;
+					}
 				}
 			} else {
 				newGameBtn.style.display = '';
