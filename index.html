@@ -39,6 +39,10 @@
             height: 20px;
             border-radius: 5px;
 
+            &:not(.clickable) {
+                cursor: default;
+            }
+
             &[disabled] {
                 opacity: 0.4;
             }
@@ -171,6 +175,7 @@
 
                     cells.forEach((x, i) => {
                         if (x === null) {
+                            cellContainer.children[i].classList.add('clickable');
                             cellContainer.children[i].onclick = () => {
                                 if (check(i)) {
                                     cells.fill(milestone.color, i, i + milestone.size);
@@ -204,6 +209,7 @@
                     const index = completedMilestones.get(milestone.id);
                     cells.forEach((x, i) => {
                         if (i >= index && i < index + milestone.size) {
+                            cellContainer.children[i].classList.add('clickable');
                             cellContainer.children[i].onclick = () => {
                                 cells.fill(null, index, index + milestone.size);
                                 milestones.shift();
