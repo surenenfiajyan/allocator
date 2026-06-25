@@ -265,7 +265,7 @@
 				if (milestones.length > 1) {
 					requestContainer.innerHTML += ' <button>Hint</button>';
 					requestContainer.querySelector('button').onclick = ev => {
-						ev.currentTarget.outerHTML = ` To do next: ${milestones.slice(1, 4).map(x => getMilestoneHtml(x).toLowerCase()).join(', ')}.`;
+						ev.currentTarget.outerHTML = `<br>To do next: ${milestones.slice(1, Math.max(4, milestones.length / 2)).map(x => getMilestoneHtml(x).toLowerCase()).join(', ')}.`;
 					}
 				}
 			} else {
