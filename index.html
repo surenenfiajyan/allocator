@@ -33,6 +33,17 @@
 			display: inline-flex;
 			padding: 10px;
 			margin: 10px;
+
+			@media screen and (max-width: 500px) {
+				box-sizing: border-box;
+				width: calc(100% - 20px);
+			}
+		}
+
+		.regular-btn {
+			@media screen and (max-width: 500px) {
+				padding: 5px 10px;
+			}
 		}
 
 		.cell {
@@ -42,11 +53,10 @@
 			margin: 0;
 			padding: 0;
 			width: 20px;
-			height: 20px;
+			aspect-ratio: 1;
 
 			@media screen and (max-width: 500px) {
-				width: 40px;
-				height: 40px;
+				width: 10%;
 			}
 
 			border-radius: 5px;
@@ -113,7 +123,7 @@
 <body>
 	<div id="requestContainer"></div>
 	<div id="cellContainer" class="cell-container"></div><br>
-	<button id="newGameBtn" style="display: none;"></button>
+	<button id="newGameBtn" class="regular-btn" style="display: none;"></button>
 
 	<script type="module">
 		const colors = [];
@@ -263,7 +273,7 @@
 				}
 
 				if (milestones.length > 1) {
-					requestContainer.innerHTML += ' <button>Hint</button>';
+					requestContainer.innerHTML += ' <button class="regular-btn">Hint</button>';
 					requestContainer.querySelector('button').onclick = ev => {
 						ev.currentTarget.outerHTML = `<br>To do next: ${milestones.slice(1, Math.max(4, milestones.length / 2)).map(x => getMilestoneHtml(x).toLowerCase()).join(', ')}.`;
 					}
