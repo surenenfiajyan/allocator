@@ -65,7 +65,7 @@
 				cursor: default;
 			}
 
-			&[disabled] {
+			&[disabled]:not(.has-contrast) {
 				opacity: 0.4;
 			}
 		}
@@ -172,6 +172,13 @@
 			cellContainer.innerHTML = cells.map(x => `<button class="cell" style="background: ${x ?? 'gray'}"></button>`).join('');
 			cellContainer.ontouchmove = cellContainer.ontouchend = cellContainer.ontouchcancel = null;
 
+			function makeAllUnclickableWithContrast() {
+				Array.from(cellContainer.children).forEach(x => {
+					x.classList.add('has-contrast');
+					x.disabled = true;
+				});
+			}
+
 			if (milestone) {
 				if (milestone.action === 'allocate') {
 					let maxFreeSpace = 0;
@@ -193,6 +200,7 @@
 						newGameBtn.style.display = '';
 						newGameBtn.innerText = 'Start a new game';
 						level = 1;
+						makeAllUnclickableWithContrast();
 						return;
 					}
 
@@ -280,6 +288,7 @@
 				newGameBtn.style.display = '';
 				newGameBtn.innerText = 'Next level';
 				++level;
+				makeAllUnclickableWithContrast();
 			}
 		}
 
