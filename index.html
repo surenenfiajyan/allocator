@@ -148,8 +148,6 @@
 			}
 		}
 
-		shuffle(colors);
-
 		const cells = [];
 
 		function shuffle(arr) {
@@ -313,6 +311,8 @@
 			function nextColor() {
 				return colors[colorIndex++ % colors.length];
 			}
+
+			shuffle(colors);
 
 			const freeBlocks = [];
 			let sum = 0;
