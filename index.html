@@ -26,6 +26,7 @@
 		}
 
 		.cell-container {
+			counter-reset: byte;
 			border: 2px solid black;
 			flex-wrap: wrap;
 			background: wheat;
@@ -47,6 +48,9 @@
 		}
 
 		.cell {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
 			box-sizing: border-box;
 			background: transparent;
 			border: 2px solid black;
@@ -55,8 +59,19 @@
 			width: 20px;
 			aspect-ratio: 1;
 
+			&::before {
+				font-size: 8px;
+				counter-increment: byte;
+				content: counter(byte);
+				color: white;
+			}
+
 			@media screen and (max-width: 500px) {
 				width: 10%;
+
+				&::before {
+					font-size: 12px;
+				}
 			}
 
 			border-radius: 5px;
